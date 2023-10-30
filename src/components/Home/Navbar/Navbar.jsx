@@ -47,7 +47,7 @@ const Navbar = () => {
       </ul>
 
       {/* LEFT  */}
-      <div className="flex items-center gap-10">
+      <div className="flex items-center gap-6">
         <Link
           href={"/"}
           className="flex items-center gap-2  hover:text-white transition-all duration-200 text-gray-200"

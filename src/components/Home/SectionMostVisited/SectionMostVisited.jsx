@@ -1,12 +1,11 @@
+import HeadSection from "@/components/UI/HeadSection";
 import SectionMostVisitedCard from "@/components/UI/SectionMostVisitedCard";
 import React from "react";
 
 const SectionMostVisited = () => {
   return (
-    <section className="main_layout pt-8 pb-16">
-      <h3 className="text-center mb-8 py-2 px-4 text-xl bg-mainColorLight text-white">
-        الأقسام الأكثر زيارة
-      </h3>
+    <section className="main_layout pt-2 pb-10">
+      <HeadSection title={"الأقسام الأكثر زيارة"} className="text-center" />
       <div className="flex flex-wrap items-center gap-4 justify-center">
         <SectionMostVisitedCard name="وافل" img="/waffle.png" link={"/"} />
         <SectionMostVisitedCard

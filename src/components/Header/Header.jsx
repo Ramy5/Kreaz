@@ -41,9 +41,9 @@ const Header = () => {
       </div>
 
       {/* CENTER */}
-      <div>
+      <Link href={"/"}>
         <Image src={"/logo.png"} alt="logo" width={150} height={100} />
-      </div>
+      </Link>
 
       {/* LEFT */}
       <div className="flex flex-col gap-2">
