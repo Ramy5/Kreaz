@@ -14,6 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: #c32155;
+  color: white;
+}
+
 .dropDown_item:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
 }

@@ -1,8 +1,14 @@
-import Countdown from "@/components/UI/Countdown";
-import HeadSection from "@/components/UI/HeadSection";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import ProductCard from "@/components/UI/ProductCard";
-import ShowAllProductsBtn from "@/components/UI/ShowAllProductsBtn";
-import React from "react";
+import HeadSection from "@/components/UI/HeadSection";
 
 // TEST DATA
 const productData = [
@@ -103,20 +109,41 @@ const productData = [
   },
 ];
 
-const OffersProduct = () => {
+const BakeMostSells = () => {
   return (
-    <section className="main_layout mb-6">
-      {/* COUNTDOWN */}
-      <div className="flex items-center gap-4 flex-wrap justify-between">
-        <HeadSection
-          title={"عروض لفترة محدودة"}
-          className={"text-right w-3/5"}
-        />
-        <Countdown />
-      </div>
+    <section className="main_layout py-6">
+      <HeadSection
+        title={"الأعلي مبيعا في قسم المخبوزات"}
+        className="text-center"
+      />
 
-      {/* PRODUCTS */}
-      <div className="py-12 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {/* SLIDE */}
+      <Swiper
+        spaceBetween={20}
+        style={{ paddingBottom: "3rem" }}
+        loop
+        centeredSlides={true}
+        navigation
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+      >
         {productData?.map((card) => {
           const {
             id,
@@ -133,27 +160,26 @@ const OffersProduct = () => {
           } = card;
 
           return (
-            <ProductCard
-              key={id}
-              cardLink={cardLink}
-              imgUrl={imgUrl}
-              isAvailable={isAvailable}
-              discountAmount={discountAmount}
-              discountPrecent={discountPrecent}
-              name={name}
-              desc={desc}
-              price={price}
-              priceDisc={priceDisc}
-              amount={amount}
-            />
+            <SwiperSlide>
+              <ProductCard
+                key={id}
+                cardLink={cardLink}
+                imgUrl={imgUrl}
+                isAvailable={isAvailable}
+                discountAmount={discountAmount}
+                discountPrecent={discountPrecent}
+                name={name}
+                desc={desc}
+                price={price}
+                priceDisc={priceDisc}
+                amount={amount}
+              />
+            </SwiperSlide>
           );
         })}
-      </div>
-
-      {/* SHOW ALL PRODUCTS BTN */}
-      <ShowAllProductsBtn />
+      </Swiper>
     </section>
   );
 };
 
-export default OffersProduct;
+export default BakeMostSells;

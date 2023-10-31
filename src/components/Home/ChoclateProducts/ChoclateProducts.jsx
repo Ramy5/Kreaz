@@ -9,72 +9,7 @@ const productData = [
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
-    discountPrecent: "%15",
-    discountAmount: "وفر 50 ج",
-    name: "تورتة قلب نوتيلا",
-    desc: "مقاس 26",
-    price: "325 ج",
-    priceDisc: "360 ج",
-    cardLink: "/",
-    amount: 1,
-  },
-  {
-    isAvailable: true,
-    id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
-    discountPrecent: "%15",
-    discountAmount: "وفر 50 ج",
-    name: "تورتة قلب نوتيلا",
-    desc: "مقاس 26",
-    price: "325 ج",
-    priceDisc: "360 ج",
-    cardLink: "/",
-    amount: 1,
-  },
-  {
-    isAvailable: true,
-    id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
-    discountPrecent: "%15",
-    discountAmount: "وفر 50 ج",
-    name: "تورتة قلب نوتيلا",
-    desc: "مقاس 26",
-    price: "325 ج",
-    priceDisc: "360 ج",
-    cardLink: "/",
-    amount: 1,
-  },
-  {
-    isAvailable: true,
-    id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
-    discountPrecent: "%15",
-    discountAmount: "وفر 50 ج",
-    name: "تورتة قلب نوتيلا",
-    desc: "مقاس 26",
-    price: "325 ج",
-    priceDisc: "360 ج",
-    cardLink: "/",
-    amount: 1,
-  },
-  {
-    isAvailable: false,
-    id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
-    discountPrecent: "%15",
-    discountAmount: "وفر 50 ج",
-    name: "تورتة قلب نوتيلا",
-    desc: "مقاس 26",
-    price: "325 ج",
-    priceDisc: "360 ج",
-    cardLink: "/",
-    amount: 1,
-  },
-  {
-    isAvailable: true,
-    id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/300 golden.png",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
@@ -84,7 +19,7 @@ const productData = [
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/300 golden.png",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
@@ -92,9 +27,59 @@ const productData = [
     amount: 1,
   },
   {
-    isAvailable: false,
+    isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/300 golden.png",
+    name: "تورتة قلب نوتيلا",
+    desc: "مقاس 26",
+    price: "325 ج",
+    cardLink: "/",
+    amount: 1,
+  },
+  {
+    isAvailable: true,
+    id: crypto.randomUUID(),
+    imgUrl: "/product/300 golden.png",
+    name: "تورتة قلب نوتيلا",
+    desc: "مقاس 26",
+    price: "325 ج",
+    cardLink: "/",
+    amount: 1,
+  },
+  {
+    isAvailable: true,
+    id: crypto.randomUUID(),
+    imgUrl: "/product/300 golden.png",
+    name: "تورتة قلب نوتيلا",
+    desc: "مقاس 26",
+    price: "325 ج",
+    cardLink: "/",
+    amount: 1,
+  },
+  {
+    isAvailable: true,
+    id: crypto.randomUUID(),
+    imgUrl: "/product/300 golden.png",
+    name: "تورتة قلب نوتيلا",
+    desc: "مقاس 26",
+    price: "325 ج",
+    cardLink: "/",
+    amount: 1,
+  },
+  {
+    isAvailable: true,
+    id: crypto.randomUUID(),
+    imgUrl: "/product/300 golden.png",
+    name: "تورتة قلب نوتيلا",
+    desc: "مقاس 26",
+    price: "325 ج",
+    cardLink: "/",
+    amount: 1,
+  },
+  {
+    isAvailable: true,
+    id: crypto.randomUUID(),
+    imgUrl: "/product/300 golden.png",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
@@ -103,31 +88,21 @@ const productData = [
   },
 ];
 
-const OffersProduct = () => {
+const ChoclateProducts = () => {
   return (
     <section className="main_layout mb-6">
-      {/* COUNTDOWN */}
-      <div className="flex items-center gap-4 flex-wrap justify-between">
-        <HeadSection
-          title={"عروض لفترة محدودة"}
-          className={"text-right w-3/5"}
-        />
-        <Countdown />
-      </div>
+      <HeadSection title={"الشوكولاته"} className={"text-right"} />
 
       {/* PRODUCTS */}
-      <div className="py-12 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="py-8 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {productData?.map((card) => {
           const {
             id,
             isAvailable,
             imgUrl,
-            discountAmount,
-            discountPrecent,
             name,
             desc,
             price,
-            priceDisc,
             cardLink,
             amount,
           } = card;
@@ -138,12 +113,9 @@ const OffersProduct = () => {
               cardLink={cardLink}
               imgUrl={imgUrl}
               isAvailable={isAvailable}
-              discountAmount={discountAmount}
-              discountPrecent={discountPrecent}
               name={name}
               desc={desc}
               price={price}
-              priceDisc={priceDisc}
               amount={amount}
             />
           );
@@ -156,4 +128,4 @@ const OffersProduct = () => {
   );
 };
 
-export default OffersProduct;
+export default ChoclateProducts;

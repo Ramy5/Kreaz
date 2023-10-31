@@ -2,18 +2,18 @@ import Link from "next/link";
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 
-const AddCartAmount = ({ isAvailable }) => {
+const AddCartAmount = ({ isAvailable, amount }) => {
   return (
     <>
       {isAvailable ? (
         <div className="flex items-center gap-2">
-          <span className="w-6 h-6 bg-mainColorLight text-center text-white">
+          <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
             +
           </span>
           <p className="w-14 h-6 border border-mainColorLight py-2 px-2 flex items-center justify-center text-mainColorLight">
-            1
+            {amount}
           </p>
-          <span className="w-6 h-6 bg-mainColorLight text-center text-white">
+          <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
             -
           </span>
         </div>
