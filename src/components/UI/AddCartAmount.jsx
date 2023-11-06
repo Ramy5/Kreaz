@@ -10,7 +10,7 @@ const AddCartAmount = ({ isAvailable, amount }) => {
           <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
             +
           </span>
-          <p className="w-14 h-6 border border-mainColorLight py-2 px-2 flex items-center justify-center text-mainColorLight">
+          <p className="w-12 h-6 border border-mainColorLight py-2 px-2 flex items-center justify-center text-mainColorLight">
             {amount}
           </p>
           <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
@@ -21,7 +21,7 @@ const AddCartAmount = ({ isAvailable, amount }) => {
         <div className="relative">
           <AiFillHeart className="absolute left-1/2 -translate-x-1/2 -top-4 text-mainColorDark text-xl" />
           <Link
-            className="text-[11px] border border-mainColorLight flex flex-col items-center py-2 px-2 bg-mainColorLight text-white"
+            className="text-[12px] border border-mainColorLight flex flex-col items-center py-2 px-2 bg-mainColorLight text-white"
             href="/"
           >
             <span>احجز المنتج لحين التوفر</span>

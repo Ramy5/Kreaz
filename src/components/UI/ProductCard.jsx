@@ -48,7 +48,7 @@ const ProductCard = ({
   }
 
   return (
-    <div className="p-6 shadow-lg hover:scale-105 transition-all duration-300 hover:shadow-xl bg-white border border-gray-300">
+    <div className="p-6 shadow-lg transition-all duration-300 hover:shadow-xl bg-white border border-gray-300">
       <Link href={cardLink}>
         {/* IMAGE */}
         <div className="relative">
@@ -78,7 +78,7 @@ const ProductCard = ({
       </Link>
 
       {/* ADD TO CART */}
-      <div className="flex flex-wrap items-center justify-between gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-1">
         <AddCartBtn isAvailable={isAvailable} />
         <AddCartAmount isAvailable={isAvailable} amount={amount} />
       </div>

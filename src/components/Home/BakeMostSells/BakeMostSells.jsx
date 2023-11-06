@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -120,6 +120,7 @@ const BakeMostSells = () => {
       {/* SLIDE */}
       <Swiper
         spaceBetween={20}
+        // className="md:w-4/5"
         style={{ paddingBottom: "3rem" }}
         loop
         centeredSlides={true}
@@ -145,35 +146,9 @@ const BakeMostSells = () => {
         }}
       >
         {productData?.map((card) => {
-          const {
-            id,
-            isAvailable,
-            imgUrl,
-            discountAmount,
-            discountPrecent,
-            name,
-            desc,
-            price,
-            priceDisc,
-            cardLink,
-            amount,
-          } = card;
-
           return (
-            <SwiperSlide>
-              <ProductCard
-                key={id}
-                cardLink={cardLink}
-                imgUrl={imgUrl}
-                isAvailable={isAvailable}
-                discountAmount={discountAmount}
-                discountPrecent={discountPrecent}
-                name={name}
-                desc={desc}
-                price={price}
-                priceDisc={priceDisc}
-                amount={amount}
-              />
+            <SwiperSlide key={card.id}>
+              <ProductCard {...card} />
             </SwiperSlide>
           );
         })}

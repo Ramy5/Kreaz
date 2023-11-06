@@ -16,7 +16,7 @@ const Offers = () => {
   return (
     <section className="main_layout grid grid-cols-1 xl:grid-cols-3 gap-6 py-8">
       {/* ADVERTISEMENT */}
-      <div className="col-span-1">
+      <div className="col-span-2 lg:col-span-1">
         <Image
           className="h-full"
           src={"/خصم.png"}

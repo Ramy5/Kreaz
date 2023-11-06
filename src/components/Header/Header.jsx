@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex gap-1 items-center border border-gray-300 text-gray-500  px-4 rounded-2xl">
           <MdLocationPin className="text-xl" />
           <p>تغيير عنوان التوصيل</p>
-          <select className="border-gray-300 text-gray-500 outline-none border-none text-sm text-center block w-24 py-2">
+          <select className="border-gray-300 text-gray-500 outline-none border-none text-sm text-center block w-24 py-2 focus:ring-transparent">
             <option value="القاهرة">القاهرة</option>
             <option value="الجيزة">الجيزة</option>
             <option value="المنوفيه">طنطا</option>

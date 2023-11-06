@@ -1,131 +1,157 @@
-import Countdown from "@/components/UI/Countdown";
-import HeadSection from "@/components/UI/HeadSection";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import ProductCard from "@/components/UI/ProductCard";
-import ShowAllProductsBtn from "@/components/UI/ShowAllProductsBtn";
-import React from "react";
+import HeadSection from "@/components/UI/HeadSection";
 
 // TEST DATA
 const productData = [
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     discountPrecent: "%15",
     discountAmount: "وفر 50 ج",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
     priceDisc: "360 ج",
-    cardLink: "/products/1",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     discountPrecent: "%15",
     discountAmount: "وفر 50 ج",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
     priceDisc: "360 ج",
-    cardLink: "/products/2",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     discountPrecent: "%15",
     discountAmount: "وفر 50 ج",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
     priceDisc: "360 ج",
-    cardLink: "/products/3",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     discountPrecent: "%15",
     discountAmount: "وفر 50 ج",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
     priceDisc: "360 ج",
-    cardLink: "/products/4",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: false,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     discountPrecent: "%15",
     discountAmount: "وفر 50 ج",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
     priceDisc: "360 ج",
-    cardLink: "/products/5",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
-    cardLink: "/products/6",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: true,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
-    cardLink: "/products/7",
+    cardLink: "/",
     amount: 1,
   },
   {
     isAvailable: false,
     id: crypto.randomUUID(),
-    imgUrl: "/product/1.png",
+    imgUrl: "/product/milk.png",
     name: "تورتة قلب نوتيلا",
     desc: "مقاس 26",
     price: "325 ج",
-    cardLink: "/products/8",
+    cardLink: "/",
     amount: 1,
   },
 ];
 
-const OffersProduct = () => {
+const MilkProducts = () => {
   return (
-    <section className="main_layout mb-6">
-      {/* COUNTDOWN */}
-      <div className="flex items-center gap-4 flex-wrap justify-between">
-        <HeadSection
-          title={"عروض لفترة محدودة"}
-          className={"text-right w-3/5"}
-        />
-        <Countdown />
-      </div>
+    <section className="main_layout py-6">
+      <HeadSection title={"منتجات الألبان"} className="text-center" />
 
-      {/* PRODUCTS */}
-      <div className="py-12 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {/* SLIDE */}
+      <Swiper
+        spaceBetween={20}
+        // className="md:w-4/5"
+        style={{ paddingBottom: "3rem" }}
+        loop
+        centeredSlides={true}
+        navigation
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
+      >
         {productData?.map((card) => {
-          return <ProductCard key={card.id} {...card} />;
+          return (
+            <SwiperSlide key={card.id}>
+              <ProductCard {...card} />
+            </SwiperSlide>
+          );
         })}
-      </div>
-
-      {/* SHOW ALL PRODUCTS BTN */}
-      <ShowAllProductsBtn />
+      </Swiper>
     </section>
   );
 };
 
-export default OffersProduct;
+export default MilkProducts;
