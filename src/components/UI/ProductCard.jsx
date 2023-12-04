@@ -8,13 +8,14 @@ const ProductCard = ({
   imgUrl,
   discountPrecent,
   discountAmount,
+  id,
+  amount,
   name,
   desc,
   price,
   priceDisc,
   isAvailable,
   cardLink,
-  amount,
 }) => {
   let contentOnImg;
 
@@ -79,8 +80,8 @@ const ProductCard = ({
 
       {/* ADD TO CART */}
       <div className="flex flex-wrap items-center justify-between gap-1">
-        <AddCartBtn isAvailable={isAvailable} />
-        <AddCartAmount isAvailable={isAvailable} amount={amount} />
+        <AddCartBtn id={id} isAvailable={isAvailable} />
+        <AddCartAmount id={id} isAvailable={isAvailable} amount={amount} />
       </div>
     </div>
   );

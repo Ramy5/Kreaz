@@ -12,12 +12,10 @@ import Navbar from "@/components/Home/Navbar/Navbar";
 import Offers from "@/components/Home/Offers/Offers";
 import OffersProduct from "@/components/Home/OffersProduct/OffersProduct";
 import SectionMostVisited from "@/components/Home/SectionMostVisited/SectionMostVisited";
-import store from "@/store/store";
-import { Provider } from "react-redux";
 
 const App = () => {
   return (
-    <Provider store={store}>
+    <>
       <Header />
       <Navbar />
       <Offers />
@@ -30,7 +28,7 @@ const App = () => {
       <MilkProducts />
       <Branches />
       <Footer />
-    </Provider>
+    </>
   );
 };
 

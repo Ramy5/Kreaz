@@ -4,9 +4,20 @@ import React from "react";
 
 const Branches = () => {
   return (
-    <section className="main_layout py-8 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-mainColorLight text-white">
+    <section className="main_layout py-8 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch bg-mainColorLight text-white">
       {/* MAP */}
-      <div className="overflow-hidden border-4">{/* <Map /> */}</div>
+      <div class=" bg-gray-300">
+        <iframe
+          width="100%"
+          height="100%"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="map"
+          scrolling="no"
+          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+        ></iframe>
+      </div>
 
       {/* BRANCHES */}
       <div>

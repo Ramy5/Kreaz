@@ -3,14 +3,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-const NavbarItem = ({ title, list }) => {
-  const [isDropdown, setIsDropdown] = useState(false);
-
+const NavbarItem = ({ title, list, isActive }) => {
   return (
     <>
       <button
         id="dropdownDefaultButton"
-        onClick={() => setIsDropdown((prev) => !prev)}
         data-dropdown-toggle="dropdown"
         className="text-gray-200 relative border-l border-white focus:outline-none px-4 font-medium text-sm text-center inline-flex items-center hover:text-white transition-all duration-200"
         type="button"
@@ -21,8 +18,8 @@ const NavbarItem = ({ title, list }) => {
           <div
             id="dropdown"
             className={`z-10 ${
-              !isDropdown && "hidden"
-            }  w-36 absolute top-5 left-1/2 -translate-x-1/2`}
+              !isActive && "hidden"
+            } w-36 absolute top-5 left-1/2 -translate-x-1/2`}
           >
             <ul
               className="py-2 text-sm text-gray-700"

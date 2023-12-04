@@ -1,3 +1,5 @@
+"use client";
+
 import {
   navListTorta,
   navListBaked,
@@ -9,41 +11,69 @@ import NavbarItem from "./NavbarItem";
 import { BiLogoFirefox } from "react-icons/bi";
 import { SlPresent } from "react-icons/sl";
 import Link from "next/link";
+import { useState } from "react";
+
+const navbarItemconstant = [
+  {
+    title: "تورت وجاتوة",
+    list: navListTorta,
+  },
+  {
+    title: "حلويات شرقيه",
+    list: navListEasternSweet,
+  },
+  {
+    title: "مخبوزات",
+    list: navListBaked,
+  },
+  {
+    title: "حلويات المولد",
+  },
+  {
+    title: "شوكولاته",
+  },
+  {
+    title: "كحك وبسكويت",
+  },
+  {
+    title: "منتجات الألبان",
+  },
+  {
+    title: "ايس كريم",
+    list: navListIceCream,
+  },
+  {
+    title: "كافيه",
+    list: navListCoffe,
+  },
+  {
+    title: "اخري",
+  },
+];
 
 const Navbar = () => {
+  const [activeId, setActiveId] = useState(null);
+
+  const handleActiveList = (id) => {
+    setActiveId((prevId) => (prevId === id ? null : id));
+  };
+
   return (
     <nav className="flex items-center main_layout rounded-xl justify-between bg-grayColorLight py-2 text-white">
       <ul className="flex">
-        <li>
-          <NavbarItem title="تورت وجاتوة" list={navListTorta} />
-        </li>
-        <li>
-          <NavbarItem title="حلويات شرقيه" list={navListEasternSweet} />
-        </li>
-        <li>
-          <NavbarItem title="مخبوزات" list={navListBaked} />
-        </li>
-        <li>
-          <NavbarItem title="حلويات المولد" />
-        </li>
-        <li>
-          <NavbarItem title="شوكولاته" />
-        </li>
-        <li>
-          <NavbarItem title="كحك وبسكويت" />
-        </li>
-        <li>
-          <NavbarItem title="منتجات الألبان" />
-        </li>
-        <li>
-          <NavbarItem title="ايس كريم" list={navListIceCream} />
-        </li>
-        <li>
-          <NavbarItem title="كافيه" list={navListCoffe} />
-        </li>
-        <li>
-          <NavbarItem title="اخري" />
-        </li>
+        {navbarItemconstant.map((nav, i) => {
+          const isActive = i === activeId;
+
+          return (
+            <li key={i} onClick={() => handleActiveList(i)}>
+              <NavbarItem
+                title={nav.title}
+                list={nav.list}
+                isActive={isActive}
+              />
+            </li>
+          );
+        })}
       </ul>
 
       {/* LEFT  */}
@@ -54,6 +84,13 @@ const Navbar = () => {
         >
           <BiLogoFirefox />
           <p>عروض</p>
+        </Link>
+        <Link
+          href={"/cartPage"}
+          className="flex items-center gap-2  hover:text-white transition-all duration-200 text-gray-200"
+        >
+          <BiLogoFirefox />
+          <p>السله</p>
         </Link>
         <Link
           className="flex items-center gap-2  hover:text-white transition-all duration-200 text-gray-200"

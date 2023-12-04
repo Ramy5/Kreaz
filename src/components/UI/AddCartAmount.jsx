@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 
-const AddCartAmount = ({ isAvailable, amount }) => {
+const AddCartAmount = ({ isAvailable, id }) => {
   return (
     <>
       {isAvailable ? (
@@ -11,9 +13,12 @@ const AddCartAmount = ({ isAvailable, amount }) => {
             +
           </span>
           <p className="w-12 h-6 border border-mainColorLight py-2 px-2 flex items-center justify-center text-mainColorLight">
-            {amount}
+            1
           </p>
-          <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
+          <span
+            onClick={() => console.log("done")}
+            className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white"
+          >
             -
           </span>
         </div>

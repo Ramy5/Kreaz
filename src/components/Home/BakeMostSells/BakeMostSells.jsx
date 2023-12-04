@@ -126,7 +126,7 @@ const BakeMostSells = () => {
         centeredSlides={true}
         navigation
         autoplay={{
-          delay: 2500,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         pagination={{
