@@ -32,9 +32,9 @@ const Aside = () => {
       </div>
 
       {/* SECOND FILTER ACCORDION */}
-      {/* <div className="mt-8">
+      <div className="mt-8">
         <AsideSearchFilter />
-      </div> */}
+      </div>
     </aside>
   );
 };

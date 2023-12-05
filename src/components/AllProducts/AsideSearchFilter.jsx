@@ -3,13 +3,36 @@
 import React from "react";
 import { Form, Formik } from "formik";
 import { CiSearch } from "react-icons/ci";
+import AsideRange from "./AsideRange";
 
 const AsideSearchFilter = () => {
-  const initialValues = {};
+  const initialValues = {
+    search: "",
+    available: "",
+    notila: "",
+    nots: "",
+    half_torta: "",
+    mini_torta: "",
+    offers_discount: "",
+    range_price: "",
+  };
+
+  const handlePriceChange = (value) => {
+    // Handle the price change, e.g., filter items based on the selected price
+    console.log("Selected Price:", value);
+    // You can use the value to filter your price range
+  };
+
+  const handleSubmit = (values, { setSubmitting }) => {
+    // Handle the form submission logic here
+    console.log("Form values:", values);
+    // You can make API calls, perform actions, etc.
+    setSubmitting(false); // This is important to manually set submitting to false when done
+  };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={(values) => {}}>
-      {(values) => {
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      {(values, handleSubmit) => {
         return (
           <Form className="">
             {/* SEARCH FILTER */}
@@ -17,6 +40,8 @@ const AsideSearchFilter = () => {
               <div className="flex items-center justify-between bg-white">
                 <input
                   type="text"
+                  id="search"
+                  name="search"
                   className="w-full text-mainColorLight placeholder:text-mainColorLight border-none focus:outline-none focus:border-none focus:ring-0"
                   placeholder="اكتب هنا بتدور على ايه"
                 />
@@ -25,7 +50,7 @@ const AsideSearchFilter = () => {
               <div className="my-3 flex items-center gap-2 mr-2">
                 <input
                   type="checkbox"
-                  className="cursor-pointer"
+                  className="checked:bg-mainColorLight checked:ring-0 checked:border checked:border-gray-300 cursor-pointer p-2"
                   name="available"
                   id="available"
                 />
@@ -36,7 +61,7 @@ const AsideSearchFilter = () => {
               <div className="my-3 flex items-center gap-2 mr-2">
                 <input
                   type="checkbox"
-                  className="cursor-pointer"
+                  className="checked:bg-mainColorLight checked:ring-0 checked:border checked:border-gray-300 cursor-pointer p-2"
                   name="notila"
                   id="notila"
                 />
@@ -47,7 +72,7 @@ const AsideSearchFilter = () => {
               <div className="my-3 flex items-center gap-2 mr-2">
                 <input
                   type="checkbox"
-                  className="cursor-pointer"
+                  className="checked:bg-mainColorLight checked:ring-0 checked:border checked:border-gray-300 cursor-pointer p-2"
                   name="nots"
                   id="nots"
                 />
@@ -58,7 +83,7 @@ const AsideSearchFilter = () => {
               <div className="my-3 flex items-center gap-2 mr-2">
                 <input
                   type="checkbox"
-                  className="cursor-pointer"
+                  className="checked:bg-mainColorLight checked:ring-0 checked:border checked:border-gray-300 cursor-pointer p-2"
                   name="half_torta"
                   id="half_torta"
                 />
@@ -69,7 +94,7 @@ const AsideSearchFilter = () => {
               <div className="my-3 flex items-center gap-2 mr-2">
                 <input
                   type="checkbox"
-                  className="cursor-pointer"
+                  className="checked:bg-mainColorLight checked:ring-0 checked:border checked:border-gray-300 cursor-pointer p-2"
                   name="mini_torta"
                   id="mini_torta"
                 />
@@ -80,7 +105,7 @@ const AsideSearchFilter = () => {
               <div className="my-3 flex items-center gap-2 mr-2">
                 <input
                   type="checkbox"
-                  className="cursor-pointer"
+                  className="checked:bg-mainColorLight checked:ring-0 checked:border checked:border-gray-300 cursor-pointer p-2"
                   name="offers_discount"
                   id="offers_discount"
                 />
@@ -95,8 +120,11 @@ const AsideSearchFilter = () => {
               <p className="bg-mainColorLight mb-6 text-white py-1 px-2">
                 تصفية السعر
               </p>
-              <input type="range" name="price_range" id="price_range" />
+
+              <AsideRange min={0} max={2000} onChange={handlePriceChange} />
             </div>
+
+            <button type="submit"></button>
           </Form>
         );
       }}

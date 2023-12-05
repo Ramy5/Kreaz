@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import ProductCard from "../UI/ProductCard";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const productData = [
   {
@@ -188,11 +190,16 @@ const productData = [
 ];
 
 const AllProducts = () => {
+  const path = usePathname();
+  console.log("🚀 ~ file: AllProducts.jsx:193 ~ AllProducts ~ path:", path);
+
   return (
     <div className="w-[80%]">
       {/* HISTORY AND FILTER FOR AVAILABLE */}
       <div className="flex justify-between mb-4">
-        <div className="w-3/4 bg-grayColorLight text-white p-2">home page</div>
+        <div className="w-3/4 bg-grayColorLight text-white p-2">
+          <Link href={"/"}>الصفحة الرئيسية</Link> / المنتجات
+        </div>
         <div className="w-max bg-grayColorLight text-white self-center">
           filter for available
         </div>
