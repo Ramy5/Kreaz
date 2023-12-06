@@ -191,7 +191,6 @@ const productData = [
 
 const AllProducts = () => {
   const path = usePathname();
-  console.log("🚀 ~ file: AllProducts.jsx:193 ~ AllProducts ~ path:", path);
 
   return (
     <div className="w-[80%]">

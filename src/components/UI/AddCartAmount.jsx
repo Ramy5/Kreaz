@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 
-const AddCartAmount = ({ isAvailable, id }) => {
+const AddCartAmount = ({ isAvailable, id, countBoxStyle }) => {
   return (
     <>
       {isAvailable ? (
@@ -12,7 +12,9 @@ const AddCartAmount = ({ isAvailable, id }) => {
           <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
             +
           </span>
-          <p className="w-12 h-6 border border-mainColorLight py-2 px-2 flex items-center justify-center text-mainColorLight">
+          <p
+            className={`${countBoxStyle} w-12 h-6 border border-mainColorLight py-2 px-2 flex items-center justify-center text-mainColorLight`}
+          >
             1
           </p>
           <span
