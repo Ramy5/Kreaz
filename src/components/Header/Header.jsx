@@ -52,14 +52,14 @@ const Header = () => {
           <p className="flex gap-1">
             <Link
               className="hover:text-mainColorLight transition-colors duration-200"
-              href="/"
+              href="/login"
             >
               {" "}
               تسجيل الدخول /
             </Link>
             <Link
               className="hover:text-mainColorLight transition-colors duration-200"
-              href="/"
+              href="/signup"
             >
               عميل جديد
             </Link>

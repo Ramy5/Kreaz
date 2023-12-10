@@ -19,6 +19,30 @@ html {
   color: white;
 }
 
+.main_gradient--1 {
+  background: hsla(341, 94%, 49%, 1);
+
+  background: linear-gradient(
+    180deg,
+    hsla(341, 94%, 49%, 1) 0%,
+    hsla(16, 90%, 77%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    180deg,
+    hsla(341, 94%, 49%, 1) 0%,
+    hsla(16, 90%, 77%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    180deg,
+    hsla(341, 94%, 49%, 1) 0%,
+    hsla(16, 90%, 77%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F40752", endColorstr="#F9AB8F", GradientType=1 );
+}
+
 .dropDown_item:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
 }
@@ -71,6 +95,30 @@ input:focus {
   width: 1rem !important;
   border-radius: 0 !important;
   height: 5px !important;
+}
+
+.main_gradient--2 {
+  background: hsla(347, 89%, 61%, 1);
+
+  background: linear-gradient(
+    180deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    180deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    180deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", endColorstr="#3E3B92", GradientType=1 );
 }
 
 @layer components {

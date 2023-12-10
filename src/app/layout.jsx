@@ -4,6 +4,7 @@ import "./globals.css";
 // Import the necessary elements
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import CSS for styling
+import Footer from "@/components/Footer/Footer";
 
 const tajawal = Tajawal({
   weight: ["400", "700"],
@@ -51,7 +52,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <body className={tajawal.className}>
-        {children} <ToastContainer />
+        {children} <Footer />
+        <ToastContainer />
       </body>
     </html>
   );
