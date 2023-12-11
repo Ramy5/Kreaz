@@ -11,7 +11,7 @@ const SaveDataCheckbox = ({ name, label }) => {
   };
 
   return (
-    <div className="self-start">
+    <div className="self-start animate_from_left animation_delay-7">
       <label className="flex items-center gap-3">
         <input
           type="checkbox"

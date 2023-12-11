@@ -44,10 +44,10 @@ const page = () => {
         {({ isValid }) => (
           <Form className="w-full">
             <div
-              className={`w-2/6 flex flex-col items-center mx-auto gap-6 p-10`}
+              className={`w-7/12 grid grid-cols-1 xl:grid-cols-2 mx-auto gap-6 p-10`}
             >
               {/* NAME */}
-              <div className="w-full">
+              <div className="w-full animate_from_right animation_delay-3">
                 <Field
                   className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
                   type="text"
@@ -59,7 +59,7 @@ const page = () => {
               </div>
 
               {/* EMAIL */}
-              <div className="w-full">
+              <div className="w-full animate_from_left animation_delay-3">
                 <Field
                   className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
                   type="email"
@@ -71,7 +71,7 @@ const page = () => {
               </div>
 
               {/* PHONE NUMBER */}
-              <div className="w-full">
+              <div className="w-full animate_from_right animation_delay-5">
                 <Field
                   className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
                   type="text"
@@ -87,7 +87,7 @@ const page = () => {
               </div>
 
               {/* CITY */}
-              <div className="w-full">
+              <div className="w-full animate_from_left animation_delay-5">
                 <Field
                   className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
                   type="text"
@@ -99,7 +99,7 @@ const page = () => {
               </div>
 
               {/* PASSWORD */}
-              <div className="w-full">
+              <div className="w-full animate_from_right animation_delay-7">
                 <Field
                   className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
                   type="password"
@@ -115,7 +115,7 @@ const page = () => {
               </div>
 
               {/* CONFIRM PASSWORD */}
-              <div className="w-full">
+              <div className="w-full animate_from_left animation_delay-7">
                 <Field
                   className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
                   type="password"
@@ -129,18 +129,19 @@ const page = () => {
                   className="error"
                 />
               </div>
+            </div>
 
+            <div className="w-7/12 mx-auto px-10 space-y-4">
               <button
-                className="text-center rounded-lg py-1 bg-white text-mainColorLight px-4 w-full text-lg"
+                className="text-center rounded-lg animate_from_top animation_delay-9 py-2 main_gradient--1 text-white px-4 w-full text-lg"
                 type="submit"
-                disabled={!isValid}
               >
-                إتمام التسجيل
+                إنشاء حساب{" "}
               </button>
 
               <Link
                 href="/login"
-                className="text-center rounded-lg py-1 bg-mainColorLight text-white px-4 w-full text-lg "
+                className="text-center animate_from_bottom animation_delay-11 block rounded-lg py-2 border hover:border-transparent hover:bg-mainColorLight transition-all duration-300 bg-transparent text-white px-4 w-full text-lg "
               >
                 لدي حساب بالفعل
               </Link>

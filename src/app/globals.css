@@ -14,6 +14,14 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c32155;
+}
+
 ::selection {
   background-color: #c32155;
   color: white;
@@ -41,6 +49,30 @@ html {
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F40752", endColorstr="#F9AB8F", GradientType=1 );
+}
+
+.main_gradient--2 {
+  background: hsla(347, 89%, 61%, 1);
+
+  background: linear-gradient(
+    180deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    180deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    180deg,
+    hsla(347, 89%, 61%, 1) 0%,
+    hsla(242, 42%, 40%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", endColorstr="#3E3B92", GradientType=1 );
 }
 
 .dropDown_item:not(:last-of-type) {
@@ -95,30 +127,6 @@ input:focus {
   width: 1rem !important;
   border-radius: 0 !important;
   height: 5px !important;
-}
-
-.main_gradient--2 {
-  background: hsla(347, 89%, 61%, 1);
-
-  background: linear-gradient(
-    180deg,
-    hsla(347, 89%, 61%, 1) 0%,
-    hsla(242, 42%, 40%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    180deg,
-    hsla(347, 89%, 61%, 1) 0%,
-    hsla(242, 42%, 40%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    180deg,
-    hsla(347, 89%, 61%, 1) 0%,
-    hsla(242, 42%, 40%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", endColorstr="#3E3B92", GradientType=1 );
 }
 
 @layer components {
@@ -254,3 +262,130 @@ input:focus {
   background: #c32155;
   cursor: pointer;
 }
+
+/*  GLOBAL ANIMATION  */
+.animation_delay-3 {
+  animation-delay: 0.3s !important;
+}
+
+.animation_delay-5 {
+  animation-delay: 0.5s !important;
+}
+
+.animation_delay-7 {
+  animation-delay: 0.7s !important;
+}
+
+.animation_delay-9 {
+  animation-delay: 0.9s !important;
+}
+
+.animation_delay-11 {
+  animation-delay: 1.1s !important;
+}
+
+/* ANIMATE SCALE */
+.animate_scale {
+  animation: animate-scale 0.7s ease-out backwards;
+}
+
+@keyframes animate-scale {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ////////////////////////////////////// */
+/* ANIMATE FROM LEFT */
+.animate_sidebar {
+  animation: show-sidebar 0.3s ease-in-out;
+}
+
+@keyframes show-sidebar {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate_from_left {
+  animation: move-left 0.7s ease-out backwards;
+}
+
+@keyframes move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0.2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ////////////////////////////////////// */
+/* ANIMATE FROM RIGHT */
+.animate_from_right {
+  animation: move-right 0.7s ease-out backwards;
+}
+
+@keyframes move-right {
+  0% {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-0.2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ////////////////////////////////////// */
+/* ANIMATE FROM BOTTOM */
+.animate_from_bottom {
+  animation: move-bottom 0.4s ease-out backwards;
+}
+
+@keyframes move-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ////////////////////////////////////// */
+/* ANIMATE FROM TOP */
+.animate_from_top {
+  animation: move-top 0.7s ease-out backwards;
+}
+
+@keyframes move-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* GLOBAL ANIMATION */

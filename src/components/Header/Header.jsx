@@ -1,3 +1,4 @@
+import useCartStore from "@/store/CartStore";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUserCircle, FaShoppingCart } from "react-icons/fa";
@@ -5,6 +6,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { MdLocationPin } from "react-icons/md";
 
 const Header = () => {
+  const { toggleCart } = useCartStore();
+
   return (
     <header className="main_layout text-grayColorLight py-6 px-2 flex flex-wrap items-center justify-between">
       {/* RIGHT */}
@@ -23,16 +26,16 @@ const Header = () => {
         <div className="flex items-center gap-2 px-4">
           <FaShoppingCart className="text-xl" />
           <p className="flex gap-2 items-center">
-            <Link
-              className="hover:text-mainColorLight transition-colors duration-200"
-              href="/"
+            <p
+              onClick={toggleCart}
+              className="hover:text-mainColorLight cursor-pointer transition-colors duration-200"
             >
               {" "}
               عرض سلة التسوق -
-            </Link>
+            </p>
             <Link
               className="hover:text-mainColorLight transition-colors duration-200"
-              href="/"
+              href="/checkout"
             >
               إتــمام الشراء
             </Link>

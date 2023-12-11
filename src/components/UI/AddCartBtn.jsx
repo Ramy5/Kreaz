@@ -1,11 +1,32 @@
+"use client";
+
+import useCartStore from "@/store/CartStore";
+import { useParams } from "next/navigation";
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 const AddCartBtn = ({ isAvailable, className }) => {
+  const params = useParams();
+  const productId = params?.id;
+  const { addToCart, addToWishlist, toggleCart } = useCartStore();
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: 1,
+      name: "kreaz",
+      price: 200,
+      image: "/33.png",
+      desc: "testing",
+    });
+
+    toggleCart();
+  };
+
   return (
     <div>
       {isAvailable && (
         <p
+          onClick={handleAddToCart}
           className={`bg-mainColorLight cursor-pointer text-white px-2 py-2 flex items-center gap-2 ${className}`}
         >
           <FaShoppingCart className="text-mainColorLight bg-white w-6 h-6 p-1 rounded-full" />
