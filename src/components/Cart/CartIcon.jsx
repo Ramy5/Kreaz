@@ -12,7 +12,7 @@ const CartIcon = () => {
     <>
       <div
         onClick={toggleCart}
-        className={`fixed bottom-5 left-5 ${"bg-mainColorLight"}  p-3 rounded-full cursor-pointer`}
+        className={`fixed bottom-9 left-9 z-40 ${"bg-mainColorLight"}  p-3 rounded-full cursor-pointer`}
       >
         <FaShoppingCart className="text-white text-2xl" />
       </div>

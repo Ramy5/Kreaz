@@ -18,7 +18,7 @@ const BookCakeForm = () => {
     <section className="main_layout py-8 grid grid-cols-1 xl:grid-cols-2 gap-8 text-grayColorLight">
       {/* RIGHT */}
       <div className="flex flex-col items-center gap-8 order-2 lg:order-1">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text-center">
           <Image
             className="object-cover mb-4"
             src={"/path 40.svg"}
@@ -48,7 +48,7 @@ const BookCakeForm = () => {
           }}
         >
           {({ resetForm, isValid }) => (
-            <Form className="w-[25rem]">
+            <Form className="w-[22rem] xl:w-[25rem]">
               <div
                 className={` flex flex-col items-center gap-4 bg-mainColorLight p-6`}
               >
@@ -143,7 +143,7 @@ const BookCakeForm = () => {
               </div>
 
               <button
-                className="text-center bg-mainColorLight text-white mt-4 py-2 px-4 w-full text-xl "
+                className="text-center bg-mainColorLight text-white mt-4 py-2 px-4 w-3/4 mx-auto block xl:w-full text-xl "
                 type="submit"
               >
                 إتمام الحجز
@@ -156,28 +156,28 @@ const BookCakeForm = () => {
       {/* LEFT */}
       <div className="grid grid-cols-1 items-end lg:grid-cols-2 gap-4 order-1 lg:order-2">
         <Image
-          className="object-cover w-full h-[90%]"
+          className="object-cover w-full h-full xl:h-[90%]"
           src={"/33.png"}
           alt="Chocolate cake"
           width={400}
           height={400}
         />
         <Image
-          className="object-cover w-full h-[90%]"
+          className="object-cover w-full h-full xl:h-[90%]"
           src={"/33.png"}
           alt="Chocolate cake"
           width={400}
           height={400}
         />
         <Image
-          className="object-cover w-full h-[90%]"
+          className="object-cover w-full h-full xl:h-[90%]"
           src={"/33.png"}
           alt="Chocolate cake"
           width={400}
           height={400}
         />
         <Image
-          className="object-cover w-full h-[90%]"
+          className="object-cover w-full h-full xl:h-[90%]"
           src={"/33.png"}
           alt="Chocolate cake"
           width={400}

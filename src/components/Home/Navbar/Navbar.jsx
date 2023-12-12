@@ -59,7 +59,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center main_layout rounded-xl justify-between bg-grayColorLight py-2 text-white">
+    <nav className="xl:flex items-center hidden main_layout rounded-xl justify-between bg-grayColorLight py-2 text-white">
       <ul className="flex">
         {navbarItemconstant.map((nav, i) => {
           const isActive = i === activeId;

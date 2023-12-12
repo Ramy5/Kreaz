@@ -131,7 +131,7 @@ input:focus {
 
 @layer components {
   .main_layout {
-    @apply md:w-11/12 mx-auto px-4 md:px-8;
+    @apply xl:w-11/12 mx-auto px-2 xl:px-8;
   }
 }
 

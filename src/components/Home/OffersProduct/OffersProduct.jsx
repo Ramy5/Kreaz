@@ -110,7 +110,7 @@ const OffersProduct = () => {
       <div className="flex items-center gap-4 flex-wrap justify-between">
         <HeadSection
           title={"عروض لفترة محدودة"}
-          className={"text-right w-3/5"}
+          className={"text-center xl:text-right w-full xl:w-3/5"}
         />
         <Countdown />
       </div>

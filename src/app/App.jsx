@@ -27,7 +27,6 @@ const App = () => {
       <BookCakeForm />
       <MilkProducts />
       <Branches />
-      <Footer />
     </>
   );
 };

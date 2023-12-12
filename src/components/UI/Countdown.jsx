@@ -75,46 +75,46 @@ const Countdown = () => {
   }, [startCountDown]);
 
   return (
-    <div className="">
+    <div className="w-full xl:w-auto">
       <div className="flex flex-col items-center justify-center gap-8 sm:gap-16">
         <div className="flex justify-center gap-3 sm:gap-8">
           <div className="flex flex-col gap-3 relative">
-            <div className="h-15 w-15 sm:w-20 sm:h-20 lg:w-25 lg:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.seconds}
               </span>
             </div>
-            <span className="text-mainColorLight text-xs sm:text-2xl text-center capitalize">
+            <span className="text-mainColorLight text-xl sm:text-2xl text-center capitalize">
               ثانية
             </span>
           </div>
           <div className="flex flex-col gap-3 relative">
-            <div className="h-15 w-15 sm:w-20 sm:h-20 lg:w-25 lg:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.minutes}
               </span>
             </div>
-            <span className="text-mainColorLight text-xs sm:text-2xl text-center capitalize">
+            <span className="text-mainColorLight text-xl sm:text-2xl text-center capitalize">
               دقيقة
             </span>
           </div>
           <div className="flex flex-col gap-3 relative">
-            <div className="h-15 w-15 sm:w-20 sm:h-20 lg:w-25 lg:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.hours}
               </span>
             </div>
-            <span className="text-mainColorLight text-xs sm:text-2xl text-center font-medium">
+            <span className="text-mainColorLight text-xl sm:text-2xl text-center font-medium">
               ساعة
             </span>
           </div>
           <div className="flex flex-col gap-3 relative">
-            <div className="h-15 w-15 sm:w-20 sm:h-20 lg:w-25 lg:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.days}
               </span>
             </div>
-            <span className="text-mainColorLight text-xs sm:text-2xl text-center capitalize">
+            <span className="text-mainColorLight text-xl sm:text-2xl text-center capitalize">
               يوم
             </span>
           </div>

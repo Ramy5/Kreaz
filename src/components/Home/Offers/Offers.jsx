@@ -14,11 +14,11 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 const Offers = () => {
   return (
-    <section className="main_layout grid grid-cols-1 xl:grid-cols-3 gap-6 py-8">
+    <section className="main_layout grid grid-cols-1 xl:grid-cols-3 gap-2 xl:gap-6 py-2 xl:py-8">
       {/* ADVERTISEMENT */}
       <div className="col-span-2 lg:col-span-1">
         <Image
-          className="h-full"
+          className="h-full w-full"
           src={"/خصم.png"}
           width={450}
           height={200}
