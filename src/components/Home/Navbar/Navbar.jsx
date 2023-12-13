@@ -86,13 +86,6 @@ const Navbar = () => {
           <p>عروض</p>
         </Link>
         <Link
-          href={"/cartPage"}
-          className="flex items-center gap-2  hover:text-white transition-all duration-200 text-gray-200"
-        >
-          <BiLogoFirefox />
-          <p>السله</p>
-        </Link>
-        <Link
           className="flex items-center gap-2  hover:text-white transition-all duration-200 text-gray-200"
           href={"/"}
         >

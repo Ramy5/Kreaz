@@ -24,9 +24,9 @@ const ProductCard = ({
       <p
         className={`${
           isAvailable && " rounded-full"
-        } absolute top-1 left-1 bg-white w-16 h-16 flex flex-col items-center justify-center`}
+        } absolute top-1 left-1 bg-white w-14 h-14 xl:w-16 xl:h-16 flex flex-col items-center justify-center`}
       >
-        <span className="text-xl text-mainColorLight font-bold">
+        <span className="xl:text-xl text-mainColorLight font-bold">
           {discountPrecent}
         </span>
         <span className="text-xs text-mainColorLight">{discountAmount}</span>
@@ -39,9 +39,9 @@ const ProductCard = ({
       <p
         className={`${
           isAvailable && " rounded-full"
-        } absolute top-1 left-1 bg-white w-16 h-16 flex flex-col items-center justify-center`}
+        } absolute top-1 left-1 bg-white w-14 h-14 xl:w-16 xl:h-16 flex flex-col items-center justify-center`}
       >
-        <span className="text-xl text-mainColorLight font-bold text-center">
+        <span className="xl:text-xl text-mainColorLight font-bold text-center">
           نفذت الكميه
         </span>
       </p>
@@ -49,7 +49,7 @@ const ProductCard = ({
   }
 
   return (
-    <div className="p-6 shadow-lg transition-all duration-300 hover:shadow-xl bg-white border border-gray-300">
+    <div className="p-2 xl:p-6 shadow-lg transition-all duration-300 hover:shadow-xl bg-white border border-gray-300">
       <Link href={cardLink}>
         {/* IMAGE */}
         <div className="relative">
@@ -66,11 +66,13 @@ const ProductCard = ({
         {/* TEXT */}
         <div className="py-4 flex flex-wrap items-center justify-between gap-2 text-grayColorDark">
           <div>
-            <p className="font-bold text-xl">{name}</p>
+            <p className="font-bold text-sm truncate xl:text-xl">{name}</p>
             <p className="text-sm">{desc}</p>
           </div>
           <div>
-            <p className="text-xl font-bold text-mainColorLight">{price}</p>
+            <p className="text-base xl:text-xl font-bold text-mainColorLight">
+              {price}
+            </p>
             {discountPrecent && (
               <p className="text-sm line-through">{priceDisc}</p>
             )}

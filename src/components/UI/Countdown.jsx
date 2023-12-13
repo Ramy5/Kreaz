@@ -75,7 +75,7 @@ const Countdown = () => {
   }, [startCountDown]);
 
   return (
-    <div className="w-full xl:w-auto">
+    <div className="w-full mx-2 xl:w-auto">
       <div className="flex flex-col items-center justify-center gap-8 sm:gap-16">
         <div className="flex justify-center gap-3 sm:gap-8">
           <div className="flex flex-col gap-3 relative">

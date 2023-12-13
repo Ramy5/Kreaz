@@ -56,7 +56,7 @@ const SectionMostVisited = () => {
           <SectionMostVisitedCard name="دوناتس" img="/دوناتس.png" link={"/"} />
         </div> */}
         {/* SLIDE */}
-        <div>
+        <div className="">
           <Swiper
             spaceBetween={10}
             style={{ paddingBottom: "1rem" }}
@@ -67,11 +67,11 @@ const SectionMostVisited = () => {
             }}
             modules={[Autoplay]}
             breakpoints={{
-              668: {
+              768: {
                 slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 6,
+                slidesPerView: 8,
               },
             }}
           >

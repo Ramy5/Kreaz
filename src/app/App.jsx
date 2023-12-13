@@ -11,6 +11,7 @@ import MilkProducts from "@/components/Home/MilkProducts/MilkProducts";
 import Navbar from "@/components/Home/Navbar/Navbar";
 import Offers from "@/components/Home/Offers/Offers";
 import OffersProduct from "@/components/Home/OffersProduct/OffersProduct";
+import PhoneFooter from "@/components/Home/PhoneFooter/PhoneFooter";
 import SectionMostVisited from "@/components/Home/SectionMostVisited/SectionMostVisited";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
       <BookCakeForm />
       <MilkProducts />
       <Branches />
+      <PhoneFooter />
     </>
   );
 };

@@ -75,6 +75,14 @@ html {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F44369", endColorstr="#3E3B92", GradientType=1 );
 }
 
+.phone_height {
+  height: calc(100vh - 65px);
+}
+
+.custom_categorySidebar_height {
+  height: calc(100vh - 65px);
+}
+
 .dropDown_item:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
 }

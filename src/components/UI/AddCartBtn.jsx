@@ -23,11 +23,11 @@ const AddCartBtn = ({ isAvailable, className }) => {
   };
 
   return (
-    <div>
+    <div className="w-full xl:w-auto">
       {isAvailable && (
         <p
           onClick={handleAddToCart}
-          className={`bg-mainColorLight cursor-pointer text-white px-2 py-2 flex items-center gap-2 ${className}`}
+          className={`bg-mainColorLight w-full xl:w-auto justify-center xl:justify-start cursor-pointer text-white px-2 py-2 flex items-center gap-2 ${className}`}
         >
           <FaShoppingCart className="text-mainColorLight bg-white w-6 h-6 p-1 rounded-full" />
           <span className="text-sm">اضف الي السله</span>
@@ -36,7 +36,7 @@ const AddCartBtn = ({ isAvailable, className }) => {
 
       {!isAvailable && (
         <p
-          className={`bg-grayColorLight text-white px-2 py-2 cursor-pointer flex items-center`}
+          className={`bg-grayColorLight w-full xl:w-auto hidden text-white px-2 py-2 cursor-pointer xl:flex items-center`}
         >
           <span className={`text-[12px]`}>عفوا المنتج غير متوفر</span>
         </p>

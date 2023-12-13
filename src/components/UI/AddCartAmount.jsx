@@ -8,7 +8,7 @@ const AddCartAmount = ({ isAvailable, id, countBoxStyle }) => {
   return (
     <>
       {isAvailable ? (
-        <div className="flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-2">
           <span className="w-6 h-6 cursor-pointer bg-mainColorLight text-center text-white">
             +
           </span>
@@ -25,7 +25,7 @@ const AddCartAmount = ({ isAvailable, id, countBoxStyle }) => {
           </span>
         </div>
       ) : (
-        <div className="relative">
+        <div className="relative w-full xl:w-auto">
           <AiFillHeart className="absolute left-1/2 -translate-x-1/2 -top-4 text-mainColorDark text-xl" />
           <Link
             className="text-[12px] border border-mainColorLight flex flex-col items-center py-2 px-2 bg-mainColorLight text-white"

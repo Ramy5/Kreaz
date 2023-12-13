@@ -34,9 +34,9 @@ const ShoppingCart = () => {
         className="fixed  inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
         onClick={toggleCart}
       ></div>
-      <div className="fixed inset-0 overflow-hidden animate_scale">
+      <div className="fixed inset-0 overflow-hidden animate_from_right">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="pointer-events-none custom_h fixed inset-y-0 right-0 flex max-w-full">
+          <div className="pointer-events-none phone_height xl:h-full fixed inset-y-0 right-0 flex max-w-full">
             <div className="pointer-events-auto w-screen max-w-md">
               <div className="flex h-full flex-col overflow-y-auto bg-white shadow-xl">
                 <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">

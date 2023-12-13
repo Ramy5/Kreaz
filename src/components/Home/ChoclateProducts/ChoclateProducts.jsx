@@ -94,7 +94,7 @@ const ChoclateProducts = () => {
       <HeadSection title={"الشوكولاته"} className={"text-right"} />
 
       {/* PRODUCTS */}
-      <div className="py-8 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="py-8 gap-6 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {productData?.map((card) => {
           return <ProductCard key={card.id} {...card} />;
         })}
