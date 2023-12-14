@@ -9,7 +9,7 @@ const SingleProductDescription = () => {
     <div className="col-span-2 xl:col-span-3">
       {/* TITLE AND PRICE + DISCOUNT */}
       <div className="flex items-center justify-between w-full">
-        <h2 className=" pb-4 font-bold border-b border-gray-200 w-8/12 text-2xl text-mainColorLight">
+        <h2 className=" pb-4 font-bold xl:border-b xl:border-gray-200 w-8/12 text-2xl text-mainColorLight">
           تورتة قلب نوتيلا
         </h2>
         <p className="bg-mainColorLight py-2 px-8 text-white rounded-full flex items-center gap-2">

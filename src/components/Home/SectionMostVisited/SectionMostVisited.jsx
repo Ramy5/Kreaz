@@ -67,7 +67,7 @@ const SectionMostVisited = () => {
           }}
           modules={[Autoplay]}
           breakpoints={{
-            400: {
+            300: {
               slidesPerView: 3,
             },
             1024: {

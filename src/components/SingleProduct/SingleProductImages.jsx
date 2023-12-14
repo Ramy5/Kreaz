@@ -71,7 +71,7 @@ const SingleProductImages = () => {
         }}
         modules={[Autoplay, Navigation]}
         breakpoints={{
-          400: {
+          300: {
             slidesPerView: 2,
           },
           768: {
