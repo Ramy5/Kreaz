@@ -60,13 +60,13 @@ const CategorySidebar = ({ closeSidebar }) => {
   };
 
   return (
-    <aside className="animate_from_right overflow-y-auto w-full custom_categorySidebar_height xl:h-full bg-gray-100 fixed top-0 left-0 z-[1000]">
+    <aside className="animate_from_right overflow-y-auto scrollbar-none w-full custom_categorySidebar_height xl:h-full bg-gray-100 fixed top-0 left-0 z-[1000]">
       <AiOutlineClose
         onClick={closeSidebar}
         className="absolute top-4 left-4 text-2xl font-bolder text-red-700"
       />
 
-      <nav className="flex mt-12 flex-col justify-between py-2 overflow-y-auto text-mainColorLight">
+      <nav className="flex mt-12 flex-col justify-between py-2 text-mainColorLight">
         <ul className="flex flex-col gap-4">
           {navbarItemconstant.map((nav, i) => {
             const isActive = i === activeId;

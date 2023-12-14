@@ -19,15 +19,19 @@ const App = () => {
     <>
       <Header />
       <Navbar />
-      <Offers />
-      <SectionMostVisited />
-      <OffersProduct />
-      <KahkBiscuit />
-      <ChoclateProducts />
-      <BakeMostSells />
-      <BookCakeForm />
-      <MilkProducts />
-      <Branches />
+
+      <div className="overflow-y-auto xl:overflow-y-visible">
+        <Offers />
+        <SectionMostVisited />
+        <OffersProduct />
+        <KahkBiscuit />
+        <ChoclateProducts />
+        <BakeMostSells />
+        <BookCakeForm />
+        <MilkProducts />
+        <Branches />
+      </div>
+
       <PhoneFooter />
     </>
   );

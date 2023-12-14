@@ -28,8 +28,8 @@ const SingleProductDescriptionTable = () => {
     <div className="bg-mainColorLight p-2 w-full">
       {descriptions.map((description) => {
         return (
-          <div className="flex items-center" key={description.id}>
-            <p className="py-2 m-[6px] px-4 bg-white font-bold text-mainColorLight w-1/4">
+          <div className="flex items-stretch" key={description.id}>
+            <p className="py-2 m-[6px] px-4 text-sm xl:text-base bg-white font-bold text-mainColorLight w-1/4">
               {description.desc}
             </p>
             <p className="py-2 m-[6px] px-4 bg-white font-bold text-mainColorLight  w-3/4">

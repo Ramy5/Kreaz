@@ -27,7 +27,7 @@ const AddCartBtn = ({ isAvailable, className }) => {
       {isAvailable && (
         <p
           onClick={handleAddToCart}
-          className={`bg-mainColorLight w-full xl:w-auto justify-center xl:justify-start cursor-pointer text-white px-2 py-2 flex items-center gap-2 ${className}`}
+          className={`bg-mainColorLight w-full justify-center xl:justify-start cursor-pointer text-white px-2 py-2 flex items-center gap-2 ${className}`}
         >
           <FaShoppingCart className="text-mainColorLight bg-white w-6 h-6 p-1 rounded-full" />
           <span className="text-sm">اضف الي السله</span>

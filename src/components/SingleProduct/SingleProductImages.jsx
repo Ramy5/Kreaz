@@ -59,7 +59,6 @@ const SingleProductImages = () => {
       {/* SLIDE */}
       <Swiper
         spaceBetween={30}
-        // className="md:w-4/5"
         loop
         centeredSlides={true}
         navigation
@@ -72,7 +71,7 @@ const SingleProductImages = () => {
         }}
         modules={[Autoplay, Navigation]}
         breakpoints={{
-          640: {
+          400: {
             slidesPerView: 2,
           },
           768: {
@@ -82,8 +81,14 @@ const SingleProductImages = () => {
       >
         {productData?.map((img) => {
           return (
-            <SwiperSlide key={img.id}>
-              <Image src={"/33.png"} width={170} height={170} alt="product" />
+            <SwiperSlide key={img.id} className="">
+              <Image
+                className=""
+                src={"/33.png"}
+                width={150}
+                height={100}
+                alt="product"
+              />
             </SwiperSlide>
           );
         })}

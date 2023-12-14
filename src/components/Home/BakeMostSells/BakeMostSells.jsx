@@ -121,7 +121,6 @@ const BakeMostSells = () => {
       <Swiper
         spaceBetween={20}
         // className="md:w-4/5"
-        style={{ paddingBottom: "3rem" }}
         loop
         centeredSlides={true}
         navigation

@@ -117,14 +117,14 @@ const productData = [
 
 const SingleReleventProduct = () => {
   return (
-    <div className="pt-8 grid grid-cols-1 xl:grid-cols-3 gap-4">
+    <div className="pt-8 grid grid-cols-1 xl:grid-cols-3 xl:gap-x-4 gap-x-0 gap-y-4">
       <div className="col-span-2">
         <HeadSection
           title={"منتجات يتم طلبها عاده مع هذا المنتج"}
           className={"text-center"}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2 xl:gap-1 items-center">
           {productData.map((el, i) => {
             return <SingleProductCard key={i} {...el} />;
           })}
@@ -133,7 +133,7 @@ const SingleReleventProduct = () => {
 
       <div className="col-span-1">
         <Image
-          className="h-full"
+          className="h-full w-full xl:w-auto"
           src={"/خصم.png"}
           width={450}
           height={400}
