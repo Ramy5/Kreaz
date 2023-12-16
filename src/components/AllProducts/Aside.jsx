@@ -19,7 +19,7 @@ const accordionList1 = [
 
 const Aside = () => {
   return (
-    <aside className="w-[19%]">
+    <aside className="w-full xl:w-[18%]">
       {/* FIRST FILTER ACCORDION */}
       <div className="container mx-auto space-y-2">
         {accordionList1.map((accordion, index) => (

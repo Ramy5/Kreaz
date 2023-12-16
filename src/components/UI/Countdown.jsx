@@ -79,7 +79,7 @@ const Countdown = () => {
       <div className="flex flex-col items-center justify-center gap-8 sm:gap-16">
         <div className="flex justify-center gap-3 sm:gap-8">
           <div className="flex flex-col gap-3 relative">
-            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-16 w-16 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.seconds}
               </span>
@@ -89,7 +89,7 @@ const Countdown = () => {
             </span>
           </div>
           <div className="flex flex-col gap-3 relative">
-            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-16 w-16 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.minutes}
               </span>
@@ -99,7 +99,7 @@ const Countdown = () => {
             </span>
           </div>
           <div className="flex flex-col gap-3 relative">
-            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-16 w-16 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.hours}
               </span>
@@ -109,7 +109,7 @@ const Countdown = () => {
             </span>
           </div>
           <div className="flex flex-col gap-3 relative">
-            <div className="h-20 w-20 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
+            <div className="h-16 w-16 xl:w-25 xl:h-25 flex justify-center items-center bg-[#E17698]">
               <span className="lg:text-4xl sm:text-2xl text-xl font-semibold text-white">
                 {countDownTime?.days}
               </span>

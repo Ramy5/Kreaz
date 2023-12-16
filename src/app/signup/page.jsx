@@ -24,8 +24,8 @@ const page = () => {
           className="mb-4"
           src={"/logo.png"}
           alt="logo"
-          width={250}
-          height={250}
+          width={200}
+          height={200}
           priority
         />
       </Link>
@@ -44,7 +44,7 @@ const page = () => {
         {({ isValid }) => (
           <Form className="w-full">
             <div
-              className={`w-7/12 grid grid-cols-1 xl:grid-cols-2 mx-auto gap-6 p-10`}
+              className={`xl:w-7/12 grid grid-cols-1 xl:grid-cols-2 mx-auto gap-6 p-10`}
             >
               {/* NAME */}
               <div className="w-full animate_from_right animation_delay-3">
@@ -131,7 +131,7 @@ const page = () => {
               </div>
             </div>
 
-            <div className="w-7/12 mx-auto px-10 space-y-4">
+            <div className="xl:w-7/12 mx-auto px-10 space-y-4">
               <button
                 className="text-center rounded-lg animate_from_top animation_delay-9 py-2 main_gradient--1 text-white px-4 w-full text-lg"
                 type="submit"

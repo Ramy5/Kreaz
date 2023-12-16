@@ -16,15 +16,15 @@ const page = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col h-screen main_gradient--1">
+    <div className="flex flex-col items-center justify-center h-screen main_gradient--1">
       {/* LOGO */}
       <Link href="/">
         <Image
           className="mb-8"
           src={"/logo.png"}
           alt="logo"
-          width={250}
-          height={250}
+          width={200}
+          height={200}
           priority
         />
       </Link>
@@ -45,12 +45,12 @@ const page = () => {
         {({ isValid }) => (
           <Form className="w-full">
             <div
-              className={` w-2/6 flex flex-col items-center mx-auto gap-6  p-12`}
+              className={` xl:w-2/6 flex flex-col items-center mx-auto gap-6  p-12`}
             >
               {/* PHONE NUMBER */}
               <div className="w-full animate_from_right">
                 <Field
-                  className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
+                  className="w-full text-base border-none rounded-lg outline-none text-mainColorLight placeholder:text-mainColorLight focus:ring-transparent"
                   type="text"
                   required
                   name="phoneNumber"
@@ -66,7 +66,7 @@ const page = () => {
               {/* PASSWORD */}
               <div className="w-full animate_from_left animation_delay-3">
                 <Field
-                  className="w-full text-mainColorLight placeholder:text-mainColorLight text-base border-none outline-none focus:ring-transparent rounded-lg"
+                  className="w-full text-base border-none rounded-lg outline-none text-mainColorLight placeholder:text-mainColorLight focus:ring-transparent"
                   type="password"
                   required
                   name="password"
@@ -80,26 +80,23 @@ const page = () => {
               </div>
 
               <button
-                className="text-center rounded-lg py-1 main_gradient--1 animate_from_top animation_delay-5 text-white px-4 w-full text-lg "
+                className="w-full px-4 py-1 text-lg text-center text-white rounded-lg main_gradient--1 animate_from_top animation_delay-5 "
                 type="submit"
               >
                 تسجيل الدخول
               </button>
 
-              <div
-                className="flex items-center justify-between w-full
-              "
-              >
+              <div className="flex flex-wrap items-center justify-between w-full gap-1 ">
                 {/* CHECKBOX FOR REMEMBER ME */}
                 <SaveDataCheckbox name="saveData" label="حفظ بيانات التسجيل" />
 
-                <p className="cursor-pointer self-start text-white hover:text-blue-400 transition-all duration-300 text-lg underline animate_from_right animation_delay-9">
+                <p className="self-start text-lg text-white underline transition-all duration-300 cursor-pointer hover:text-blue-400 animate_from_right animation_delay-9">
                   هل نسيت كلمة السر؟
                 </p>
               </div>
               <Link
                 href="/signup"
-                className="text-center animate_from_bottom animation_delay-11 border rounded-lg py-1 duration-300 transition-all hover:bg-mainColorLight hover:border-transparent text-white bg-transparent px-4 w-full text-lg "
+                className="w-full px-4 py-1 text-lg text-center text-white transition-all duration-300 bg-transparent border rounded-lg animate_from_bottom animation_delay-11 hover:bg-mainColorLight hover:border-transparent "
               >
                 انشاء حساب جديد
               </Link>

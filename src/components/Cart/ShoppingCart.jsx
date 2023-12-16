@@ -31,15 +31,15 @@ const ShoppingCart = () => {
       dir=""
     >
       <div
-        className="fixed  inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"
         onClick={toggleCart}
       ></div>
       <div className="fixed inset-0 overflow-hidden animate_from_right">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="pointer-events-none phone_height xl:h-full fixed inset-y-0 right-0 flex max-w-full">
-            <div className="pointer-events-auto w-screen max-w-md">
-              <div className="flex h-full flex-col overflow-y-auto bg-white shadow-xl">
-                <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+          <div className="fixed inset-y-0 right-0 flex max-w-full pointer-events-none phone_height xl:h-full">
+            <div className="w-screen max-w-md pointer-events-auto">
+              <div className="flex flex-col h-full overflow-y-auto bg-white shadow-xl">
+                <div className="flex-1 px-4 py-6 overflow-y-auto sm:px-6">
                   <div className="flex items-start justify-between">
                     <h2
                       className="text-lg font-medium text-mainColorLight"
@@ -47,16 +47,16 @@ const ShoppingCart = () => {
                     >
                       مراجعة السلة{" "}
                     </h2>
-                    <div className="flex h-7 items-center">
+                    <div className="flex items-center h-7">
                       <button
                         type="button"
-                        className="relative -m-2 p-2 text-mainColorLight hover:text-mainColorDark"
+                        className="relative p-2 -m-2 text-mainColorLight hover:text-mainColorDark"
                         onClick={toggleCart}
                       >
                         <span className="absolute -inset-0.5"></span>
                         <span className="sr-only">Close panel</span>
                         <svg
-                          className="h-6 w-6"
+                          className="w-6 h-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -80,8 +80,8 @@ const ShoppingCart = () => {
                         className="-my-6 divide-y divide-gray-200"
                       >
                         {cartItems.map((item) => (
-                          <li key={item.id} className="flex py-6 gap-4">
-                            <div className="h-24 w-24 flex justify-center items-center flex-shrink-0 overflow-hidden border border-gray-200">
+                          <li key={item.id} className="flex gap-4 py-6">
+                            <div className="flex items-center justify-center flex-shrink-0 w-24 h-24 overflow-hidden border border-gray-200">
                               {/* Replace the src attribute with your actual image source */}
                               <Image
                                 src={item.image}
@@ -92,10 +92,10 @@ const ShoppingCart = () => {
                               />
                             </div>
 
-                            <div className="flex flex-1 flex-col">
+                            <div className="flex flex-col flex-1">
                               <div>
                                 <div className="flex justify-between gap-4 text-base font-medium text-gray-900">
-                                  <h3 className="truncate w-24">
+                                  <h3 className="w-24 truncate">
                                     <p className="truncate">{item.name}</p>
                                   </h3>
                                   <p className="ml-4">
@@ -106,7 +106,7 @@ const ShoppingCart = () => {
                                   Product description
                                 </p> */}
                               </div>
-                              <div className="flex flex-1 items-end justify-between text-sm">
+                              <div className="flex items-end justify-between flex-1 text-sm">
                                 <p className="text-mainColorLight">
                                   X {item.quantity}
                                 </p>
@@ -115,7 +115,7 @@ const ShoppingCart = () => {
                                   <button
                                     type="button"
                                     onClick={() => removeFromCart(item.id)}
-                                    className="font-medium flex items-center gap-1 text-mainColorLight hover:text-mainColorDark"
+                                    className="flex items-center gap-1 font-medium text-mainColorLight hover:text-mainColorDark"
                                   >
                                     <span>إزالة من السلة</span> <MdDelete />
                                   </button>
@@ -129,7 +129,7 @@ const ShoppingCart = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-mainColorLight px-4 py-6 sm:px-6">
+                <div className="px-4 py-6 border-t border-mainColorLight sm:px-6">
                   <div className="flex justify-between text-base font-medium text-mainColorLight">
                     <p>الإجمالي</p>
                     <p>EGP {calculateTotal().toFixed(2)}</p>
@@ -141,12 +141,12 @@ const ShoppingCart = () => {
                     <Link
                       href="/checkout"
                       onClick={toggleCart}
-                      className="flex items-center justify-center rounded-md main_gradient--1 px-6 py-3 text-base font-medium text-white shadow-sm"
+                      className="flex items-center justify-center px-6 py-3 text-base font-medium text-white rounded-md shadow-sm main_gradient--1"
                     >
                       الإستمرار الي الدفع
                     </Link>
                   </div>
-                  <div className="mt-6 flex justify-center text-center text-sm text-mainColorLight">
+                  <div className="flex justify-center mt-6 text-sm text-center text-mainColorLight">
                     <p>
                       <button
                         type="button"

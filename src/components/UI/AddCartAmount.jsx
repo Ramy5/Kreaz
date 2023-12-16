@@ -26,7 +26,7 @@ const AddCartAmount = ({ isAvailable, id, countBoxStyle }) => {
         </div>
       ) : (
         <div className="relative w-full xl:w-auto">
-          <AiFillHeart className="absolute left-1/2 -translate-x-1/2 -top-4 text-mainColorDark text-xl" />
+          <AiFillHeart className="hidden xl:block absolute left-1/2 -translate-x-1/2 -top-4 text-mainColorDark text-xl" />
           <Link
             className="text-[12px] border border-mainColorLight flex flex-col items-center py-2 px-2 bg-mainColorLight text-white"
             href="/"
